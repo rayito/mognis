@@ -1,94 +1,74 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+
+import './home.scss';
+import { useSearchParams } from 'next/navigation'
+
+function Content({ approach, celebration }) {
+  if (celebration === "familia") {
+    return (
+      <div className='content'>
+        Nos ha dao por casarnos y {approach} a la cenita que vamos a organazar para celebrarlo. 
+      </div>
+    );
+  } else {
+    return (
+      <div className='content'>
+        Nos ha dao por casarnos y {approach} al fiestote que se viene en sabe dios dónde para celebrarlo.
+      </div>
+    );
+  }
+}
 
 export default function Home() {
+  const searchParams = useSearchParams()
+  //const queryParameters = new URLSearchParams(window.location.search);
+  let count = 0;
+  const celebration = searchParams.get('celebration');
+  const singleGender = searchParams.get('singlegender') || 'F';
+  const name1 = searchParams.get('name1') || '';
+  if (name1 != '') count++;
+  const name2 = searchParams.get('name2') || '';
+  if (name2 != '') count++;
+  const name3 = searchParams.get('name3') || '';
+  if (name3 != '') count++;
+  const name4 = searchParams.get('name4') || '';
+  if (name4 != '') count++;
+
+  const getSalute = () => {
+    const salutes = [
+      '',
+      ` ${name1}`,
+      ` ${name1} y ${name2}`,
+      ` ${name1}, ${name2} y ${name3}`,
+      ` ${name1}, ${name2}, ${name3} y ${name4}`,
+    ];
+    return `¡Hola${salutes[count]}!`;
+  }
+
+  const getApproach = () => {
+    let youAre;
+    let invited; 
+    if (count === 1) {
+      youAre = 'estás';
+      invited = singleGender === 'M' ? 'invitado' : 'invitada';
+    } else {
+      youAre = 'estáis';
+      invited = 'invitadas';
+    }
+    return `${youAre} ${invited}`;
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <main>
+      <div className='salute center'>
+        {getSalute()} <br></br>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <Content
+        approach={getApproach()}
+        celebration={celebration}
+      />
+      <div>
+        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2098.511041693763!2d-3.176546502468392!3d37.364052801021806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6e2c1f335fae4f%3A0x9d6ce650a994a5c0!2sCuevas%20La%20Chumbera!5e1!3m2!1ses!2ses!4v1713879856018!5m2!1ses!2ses"></iframe>
       </div>
     </main>
   );
