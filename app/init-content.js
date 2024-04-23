@@ -44,9 +44,13 @@ export default function InitContent() {
 
   const getMessage = () => {
     if (celebration === "familia") {
-      return `Nos ha dao por casarnos y ${getApproach()} a la cenita que vamos a organazar para celebrarlo.`;
+      return (
+        <p>Nos ha dao por casarnos y {getApproach()} a la cenita que vamos a organizar para celebrarlo.</p>
+      );
     } else {
-      return `Nos ha dao por casarnos y ${getApproach()} al fiestote que se viene en sabe dios dónde para celebrarlo.`;
+      return (
+        <p>Nos ha dao por casarnos y {getApproach()} al fiestote que se viene en sabe dios dónde para celebrarlo.</p>
+      );
     }
   }
 
