@@ -22,6 +22,7 @@ export default function Home() {
       <Suspense>
         <ConditionalContent />
       </Suspense>
+      <p className='credits mb2'><i>Ilustraciones de Iru Expósito y Eva Lí</i></p>
     </main>
   );
 }
