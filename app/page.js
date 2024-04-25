@@ -19,7 +19,9 @@ export default function Home() {
           alt="Les Kokosis"
         />
       </div>
-      <ConditionalContent />
+      <Suspense>
+        <ConditionalContent />
+      </Suspense>
     </main>
   );
 }
