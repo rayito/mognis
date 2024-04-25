@@ -157,3 +157,11 @@ h2 {
         padding: .5rem 1rem .5rem .5rem;
     }
 }
+
+.pregunticas {
+    @include flex-center;
+}
+
+.large-text {
+    font-size: 1.2rem;;
+}

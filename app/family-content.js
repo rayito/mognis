@@ -1,8 +1,14 @@
+import FamilyIndice from './f-indice';
+import FamilyMainContent from './f-main-content';
+import FamilyNormas from './f-normas';
 import './home.scss';
-import Indice from './indice';
-import MainContent from './main-content';
-import ScheduleContent from './schedule-content';
 
 export default function FamilyContent() {
-
+  return (
+    <div>
+      <FamilyIndice />
+      <FamilyMainContent />
+      <FamilyNormas />
+    </div>
+  );
 }

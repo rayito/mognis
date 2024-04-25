@@ -151,3 +151,12 @@ h2 {
   background-color: rgb(222, 255, 242);
   padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
+
+.pregunticas {
+  display: flex;
+  justify-content: center;
+}
+
+.large-text {
+  font-size: 1.2rem;
+}

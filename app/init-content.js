@@ -7,23 +7,23 @@ export default function InitContent() {
   const searchParams = useSearchParams()
   let count = 0;
   const celebration = searchParams.get('c');
-  const singleGender = searchParams.get('singlegender') || 'F';
-  const name1 = searchParams.get('name1') || '';
-  if (name1 != '') count++;
-  const name2 = searchParams.get('name2') || '';
-  if (name2 != '') count++;
-  const name3 = searchParams.get('name3') || '';
-  if (name3 != '') count++;
-  const name4 = searchParams.get('name4') || '';
-  if (name4 != '') count++;
+  const sg = searchParams.get('sg') || 'F';
+  const n1 = searchParams.get('n1') || '';
+  if (n1 != '') count++;
+  const n2 = searchParams.get('n2') || '';
+  if (n2 != '') count++;
+  const n3 = searchParams.get('n3') || '';
+  if (n3 != '') count++;
+  const n4 = searchParams.get('n4') || '';
+  if (n4 != '') count++;
 
   const getSalute = () => {
     const salutes = [
       '',
-      ` ${name1}`,
-      ` ${name1} y ${name2}`,
-      ` ${name1}, ${name2} y ${name3}`,
-      ` ${name1}, ${name2}, ${name3} y ${name4}`,
+      ` ${n1}`,
+      ` ${n1} y ${n2}`,
+      ` ${n1}, ${n2} y ${n3}`,
+      ` ${n1}, ${n2}, ${n3} y ${n4}`,
     ];
     return `¡Hola${salutes[count]}!`;
   }
@@ -33,7 +33,7 @@ export default function InitContent() {
     let invited; 
     if (count === 1) {
       youAre = 'estás';
-      invited = singleGender === 'M' ? 'invitado' : 'invitada';
+      invited = sg === 'M' ? 'invitado' : 'invitada';
     } else {
       youAre = 'estáis';
       invited = 'invitadas';
@@ -42,7 +42,7 @@ export default function InitContent() {
   }
 
   const getMessage = () => {
-    if (celebration === "familia") {
+    if (celebration === 'f') {
       return (
         <p>Nos ha dao por casarnos y {getApproach()} a la cenita que vamos a organizar para celebrarlo.</p>
       );
