@@ -44,11 +44,11 @@ export default function InitContent() {
   const getMessage = () => {
     if (celebration === 'f') {
       return (
-        <p>Nos ha dao por casarnos y {getApproach()} a la cenita que vamos a organizar para celebrarlo.</p>
+        <p>Somos Ana y Edén, nos ha dao por casarnos y {getApproach()} a la cenita que vamos a organizar para celebrarlo.</p>
       );
     } else {
       return (
-        <p>Nos ha dao por casarnos y {getApproach()} al fiestote que se viene en sabe dios dónde para celebrarlo.</p>
+        <p>Somos Ana y Edén, nos ha dao por casarnos y {getApproach()} al fiestote que se viene en sabe dios dónde para celebrarlo.</p>
       );
     }
   }
