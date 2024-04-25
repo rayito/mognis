@@ -25,7 +25,7 @@ export default function MainContent() {
     <p className='mb2'>
         Lejillos. A 14 horas a pie desde Armilla, pero vaya, na comparao con lo que hizo Frodo y él no iba a una fiesta.
     </p>
-    <div className='image-block mb2'>
+    <div className='image-block frodo mb2'>
         <Image
         src={frodo}
         layout='responsive'
