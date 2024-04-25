@@ -66,8 +66,12 @@ body {
 }
 
 a {
-  color: inherit;
+  color: rgb(77, 36, 255);
   text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 

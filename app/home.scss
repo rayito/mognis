@@ -1,46 +1,159 @@
-
-main {
-    
-    font-size: 1rem;
-    font-weight: 400;
-}
-.salute {
-    font-family: "Cormorant Upright", serif;
-    margin: 2rem 0 2rem 0;
-    font-weight: 600;
-    font-size: 3rem;
-}
-.content {
-    padding: 1rem;
-}
-.image-block {
-    position: relative;
-    height: 50vw;
-    img {
-        object-fit: contain;
-    }
+@mixin no-flex-center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.map-block {
-    padding: 1rem;
-    .map {
-        width: 100vw;
-        height: 75vw;
-        max-width: 1000px;
-        max-height: 500px;
-        border: none;
-        margin: 1rem auto 1rem auto;
-    }
-}
-
-.center {
+@mixin flex-center {
     display: flex;
     justify-content: center;
 }
 
-.message {
+@mixin limit-width {
     width: 100%;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    @include no-flex-center;
+}
+
+.mb1 {
+    margin-bottom: 1rem !important;
+}
+
+.mb2 {
+    margin-bottom: 2rem !important;
+}
+
+main {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.salute {
+    @include flex-center;
+    font-family: "Cormorant Upright", serif;
+    margin: 3rem 0 2rem;
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+
+.content {
+    padding: 0 1rem;
+
+    > p {
+        @include no-flex-center;
+        @include limit-width;
+        margin-bottom: .5rem;
+        
+        &.dialogue {
+            padding-left: 1rem;
+        }
+    }
+}
+
+.anchor:before { 
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0; 
+    height: 1rem; 
+    margin-top: -1rem; 
+}
+
+ul {
+    @include limit-width;
+    list-style: none;
+    padding-left: 1rem;
+    
+    li {
+        margin-bottom: .5rem
+    }
+}
+
+ol {
+    @include limit-width;
+    list-style-type: devanagari;
+    padding-left: 1.25rem;
+    
+    li {
+        margin-bottom: .5rem
+    }
+}
+
+h2, h3, h4 {
+    @include limit-width;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.image-block {
+    position: relative;
+    height: 50vw;
+    max-width: 700px;
+    max-height: 393px;
+    @include no-flex-center;
+
+    img {
+        object-fit: contain;
+    }
+
+    &.kokosis-pic {
+        height: 60vw;
+        min-height: 280px;
+    }
+}
+
+.map-block {    
+    @include flex-center;
+
+    .map {
+        width: 100%;
+        height: 50vw;
+        max-width: 700px;
+        max-height: 500px;
+        border: none;
+    }
+}
+#schedule {
+    h2 {
+        padding: 0 1rem;
+    }
+}
+.schedule {
+    @include limit-width;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .25rem;
+
+    p {
+        margin-bottom: .5rem;
+    }
+
+    .time {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem .5rem .5rem 1rem;
+        background-color: rgb(255, 234, 253);
+
+        .day-name,
+        .day-number {
+            font-size: 1.1rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .hour {
+        margin-right: .25rem;
+    }
+
+    .event {
+        background-color: rgb(222, 255, 242);
+        padding: .5rem 1rem .5rem .5rem;
+    }
 }

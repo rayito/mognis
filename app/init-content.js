@@ -5,9 +5,8 @@ import { useSearchParams } from 'next/navigation'
 
 export default function InitContent() {
   const searchParams = useSearchParams()
-  //const queryParameters = new URLSearchParams(window.location.search);
   let count = 0;
-  const celebration = searchParams.get('celebration');
+  const celebration = searchParams.get('c');
   const singleGender = searchParams.get('singlegender') || 'F';
   const name1 = searchParams.get('name1') || '';
   if (name1 != '') count++;
@@ -56,12 +55,10 @@ export default function InitContent() {
 
   return (
     <div className='content'>
-      <div className='salute center'>
+      <h1 className='salute'>
         {getSalute()}
-      </div>
-      <div className='message'>
-        {getMessage()}
-      </div>
+      </h1>
+      {getMessage()}
     </div>
   );
 }
