@@ -1,6 +1,7 @@
 import './home.scss';
 import Image from 'next/image';
 import frodo from './images/frodo-its-done.gif';
+import cave from './images/cave.gif';
 
 export default function MainContent() {
     return (
@@ -37,12 +38,19 @@ export default function MainContent() {
     <p className='mb1'>
         El lugar se llama <a target='_blank' href='https://maps.app.goo.gl/5q8sz7LWvCW8RW8K7'>Cuevas La Chumbera</a>, a 3 minutos de Benalúa de Guadíx. 
     </p>
-    <div className='map-block center mb1'>
+    <div className='map-block center mb2'>
         <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2098.511041693763!2d-3.176546502468392!3d37.364052801021806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6e2c1f335fae4f%3A0x9d6ce650a994a5c0!2sCuevas%20La%20Chumbera!5e1!3m2!1ses!2ses!4v1713879856018!5m2!1ses!2ses"></iframe>
     </div>
-    <p>
+    <p className='mb1'>
         Y... sí. Son cuevas. Cuevas granaínas. Vamos a dormir en cuevas granaínas &#128525;
     </p>
+    <div className='image-block cave-img mb2'>
+        <Image
+        src={cave}
+        layout='responsive'
+        alt="Cueva"
+        />
+    </div>
 </div>
       );
 }

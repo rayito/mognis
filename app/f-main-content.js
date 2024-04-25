@@ -17,7 +17,7 @@ export default function FamilyMainContent() {
       ¡Ojo! necesitamos un poco de información sobre ustedes. Por favor, rellena este cortito formulario para que podamos organizarlo todo lo mejor posible. 
     </p>
     <p className='mb1 pregunticas'>
-      <a target='_blank' href='https://forms.gle/X5SrFAjsLLtdwwra8'>&rarr;&rarr;&rarr; Pregunticas &larr;&larr;&larr;</a>
+      <a target='_blank' href='https://forms.gle/X5SrFAjsLLtdwwra8'>&#128073;&#127996; Pregunticas &#128072;&#127996;</a>
     </p>
     <p>
       Por favor, confirma asistencia rellenando el formulario antes del <strong className='large-text'>viernes 3 de mayo</strong>. 

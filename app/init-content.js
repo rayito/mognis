@@ -48,7 +48,7 @@ export default function InitContent() {
       );
     } else {
       return (
-        <p>Somos Ana y Edén, nos ha dao por casarnos y {getApproach()} al fiestote que se viene en sabe dios dónde para celebrarlo.</p>
+        <p>Somos Ana y Edén, nos ha dao por casarnos y {getApproach()} al fiestote que se viene para celebrarlo.</p>
       );
     }
   }
