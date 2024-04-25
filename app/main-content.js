@@ -17,7 +17,7 @@ export default function MainContent() {
         &#128527; ...no sé, ¿esperábais otra cosa?.
     </p>
     <p>
-        Hemos buscado un sitio maravilloso para celebrarlo. Nos lo vamos a pasar como enanos. De verdad, va a ser la hostia. Está un poco lejos, pero nah merece la pena, de verdad...
+        Hemos buscado un sitio maravilloso para celebrarlo. Nos lo vamos a pasar de escándalo. De verdad, va a ser la hostia. Está un poco lejos, pero nah merece la pena, de verdad...
     </p>
     <p className='dialogue'>
         <i>Cúchame... ¿cómo de lejos?</i>
@@ -51,6 +51,15 @@ export default function MainContent() {
         alt="Cueva"
         />
     </div>
+    <p className='mb1'>
+      ¡Ojo! necesitamos un poco de información sobre ustedes. Rellenad este cortito formulario para que podamos organizarlo todo lo mejor posible. 
+    </p>
+    <p className='mb1 pregunticas'>
+      <a target='_blank' href='https://forms.gle/YbSqnBo8mT46taL36'>&#128073;&#127996; Pregunticas &#128072;&#127996;</a>
+    </p>
+    <p>
+      Por favor, confirma asistencia rellenando el formulario antes del <strong>viernes 10 de mayo</strong>. 
+    </p>
 </div>
       );
 }
