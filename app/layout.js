@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Casamiento",
   description: "Invitación a la celebración del casamiento de Ana y Edén.",
+  openGraph: {
+    images: './images/opengraph-image.jpg',
+  },
 };
 
 export default function RootLayout({ children }) {
