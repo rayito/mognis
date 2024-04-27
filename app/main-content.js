@@ -2,6 +2,7 @@ import './home.scss';
 import Image from 'next/image';
 import frodo from './images/frodo-its-done.gif';
 import cave from './images/cave.gif';
+import mognis from './images/opengraph-image.jpg';
 
 export default function MainContent() {
     return (
@@ -60,6 +61,16 @@ export default function MainContent() {
     <p>
       Por favor, confirma asistencia rellenando el formulario antes del <strong>viernes 10 de mayo</strong>. 
     </p>
+    <p className='mb1'>
+        ¡Os esperamos!
+    </p>
+    <div className='image-block mognis mb2'>
+        <Image
+        src={mognis}
+        layout='responsive'
+        alt="Moñis"
+        />
+    </div>
 </div>
       );
 }
