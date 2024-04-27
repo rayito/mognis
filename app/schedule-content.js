@@ -5,7 +5,7 @@ export default function ScheduleContent() {
   return (
 <div className='anchor mb2' id='schedule'>
   <h2>Schedule</h2>
-  <div className='schedule mb1'>
+  <div className='schedule mb05'>
     <div className='time friday'>
       <span className='day-name'>Vie</span> 
       <span className='day-number'>5 Jul</span>
@@ -43,7 +43,7 @@ export default function ScheduleContent() {
       <p>Confiamos en que sea con una sonrisa en la cara.</p>
     </div>
   </div>
-  <p className='credits dialogue'><i>Horas aproximadas</i></p>
+  <p className='credits dialogue horasaprox'><i>Horas aproximadas</i></p>
 </div>
   );
 }
