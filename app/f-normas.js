@@ -20,13 +20,9 @@ export default function FamilyNormas() {
       ¡Relax y pasadlo bien!
     </li>
   </ol>
-  <div className='image-block carlton-gif mb2'>
-    <Image
-      src={carlton}
-      layout='responsive'
-      alt="Carlton"
-    />
-  </div>
+  <video className='video' autoPlay muted loop preload="none">
+    <source src="/images/golden-girls-konga.mp4" type="video/mp4"/>
+  </video>
 </div>
       );
 }
