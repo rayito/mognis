@@ -91,13 +91,14 @@ h2 {
 
 .image-block {
     position: relative;
-    height: 50vw;
+    height: auto;
     max-width: 700px;
-    max-height: 400px;
     @include no-flex-center;
 
     img {
         object-fit: contain;
+        position: relative !important;
+        max-height: 400px;
     }
 
     &.kokosis-pic {
@@ -105,14 +106,18 @@ h2 {
         min-height: 280px;
     }
 
-    &.frodo {
-        max-height: 393px;
-    }
-
     &.cave-img {
         height: 70vw;
         min-height: 270px;
         max-height: 528px;
+    }
+    &.carlton-gif {
+        height: auto;
+        min-height: 270px;
+        max-height: 528px;
+        img {
+            position: relative;
+        } 
     }
 }
 
@@ -181,3 +186,4 @@ h2 {
     @include limit-width;
     padding: 0 1rem;
 }
+
