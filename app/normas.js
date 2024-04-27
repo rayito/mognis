@@ -1,4 +1,10 @@
 import './home.scss';
+import Image from 'next/image';
+import cat from './images/happy-cat.gif';
+import theOffice1 from './images/party-theoffice.gif';
+import theOffice2 from './images/the-office-handsup.gif';
+import theOffice3 from './images/theoffice-champagne.gif';
+
 
 export default function Normas() {
     return (
@@ -19,6 +25,34 @@ export default function Normas() {
     </li>
   </ol>
   <p className='dialogue'><i>Si ves los números raros es porque están en sánscrito, así somos...</i></p>
+  <div className='image-block cat mb1'>
+    <Image
+      src={cat}
+      layout='responsive'
+      alt="cat"
+    />
+  </div>
+  <div className='image-block the-office-1 mb1'>
+    <Image
+      src={theOffice1}
+      layout='responsive'
+      alt="The Office"
+    />
+  </div>
+  <div className='image-block the-office-2 mb1'>
+    <Image
+      src={theOffice2}
+      layout='responsive'
+      alt="The Office Hands Up"
+    />
+  </div>
+  <div className='image-block the-office-3 mb1'>
+    <Image
+      src={theOffice3}
+      layout='responsive'
+      alt="The Office Champagne"
+    />
+  </div>
 </div>
       );
 }
