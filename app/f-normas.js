@@ -1,5 +1,5 @@
 import './home.scss';
-import carlton from './images/carlton.gif';
+import golden from './images/konga.gif';
 import Image from 'next/image';
 
 export default function FamilyNormas() {
@@ -20,9 +20,13 @@ export default function FamilyNormas() {
       ¡Relax y pasadlo bien!
     </li>
   </ol>
-  <video className='video' autoPlay muted loop preload="none">
-    <source src="/images/golden-girls-konga.mp4" type="video/mp4"/>
-  </video>
+  <div className='image-block golden mb2'>
+    <Image
+      src={golden}
+      layout='responsive'
+      alt="Golden Girls"
+    />
+  </div>
 </div>
       );
 }
